@@ -28,3 +28,7 @@
 table th:first-child {
   min-width: 200px;
 }
+
+table th:nth-child(2) {
+  min-width: 142px;
+}

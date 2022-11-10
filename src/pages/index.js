@@ -28,15 +28,33 @@ export default function Home() {
     <Layout title={siteConfig.title} description="Dev site for Nik0kin">
       <HomepageHeader />
       <main>
-        <p style={{ textAlign: 'center' }}>
-          I am interested in Javascript, Matrix, & SelfHosting.
+        <p style={{ textAlign: 'center', marginTop: '1.5em' }}>
+          I am interested in {getJavascriptName()}, Matrix, & SelfHosting.
         </p>
-        <br />
-        <br />
         <p style={{ textAlign: 'center' }}>
           I am semi-interested in TurnBased/asynchronous game development.
         </p>
       </main>
     </Layout>
   );
+}
+
+function getJavascriptName() {
+  return getRandomArrayElement([
+    'javascript',
+    'Javascript',
+    'JavaScript',
+    'ECMAScript',
+    'Typescript',
+    'TypeScript',
+  ]);
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function getRandomArrayElement(array) {
+  return array[getRandomInt(0, array.length - 1)];
 }
