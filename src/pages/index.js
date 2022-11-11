@@ -27,13 +27,30 @@ export default function Home() {
   return (
     <Layout title={siteConfig.title} description="Dev site for Nik0kin">
       <HomepageHeader />
-      <main>
-        <p style={{ textAlign: 'center', marginTop: '1.5em' }}>
+      <main
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <p style={{ marginTop: '1.5em' }}>
           I am interested in {getJavascriptName()}, Matrix, & SelfHosting.
         </p>
-        <p style={{ textAlign: 'center' }}>
-          I am semi-interested in TurnBased/asynchronous game development.
-        </p>
+        <p>I am semi-interested in TurnBased/asynchronous game development.</p>
+
+        <br />
+        <br />
+        <br />
+
+        <div>
+          I also have a{' '}
+          <a rel="me" href="https://atx.pub/@Nikokin">
+            Mastodon
+          </a>{' '}
+          account
+        </div>
       </main>
     </Layout>
   );
